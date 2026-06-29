@@ -1,16 +1,25 @@
-![Header Image](https://github.com/ee209-2020class/ee209-2020class.github.io/blob/master/ExtraInfo/logo.png)
+# AC Energy Monitor
 
-# Advanced Repository Structure
+Firmware and design files for an AC energy monitor developed as part of 
+ELECTENG 209 at the University of Auckland.
 
-This is the advanced structure for your project repository, which mimics the structure of a real-world Git project.
+## What it does
+Measures and displays the voltage, current, real power, and energy consumed 
+by an inductive AC load. Results are shown sequentially on a 4-digit 
+7-segment display.
 
-If you are not confident enough with Git/GitHub yet and would like a simpler repository structure, you may choose to use the [basic structure](../Basic/).
+## Repository contents
+- `firmware/` — ATmega328PB C code written in Atmel/Microchip Studio
+- `ltspice/` — Simulation files for the analogue signal conditioning circuitry
+- `schematic/` — Circuit schematic for the analogue front end
 
-> [!IMPORTANT]
-> - The industry judges will have a look at your repo if you are among the top teams.
-> - Familiarity with branches and pull requests is *expected pre-requisite knowledge* in `COMPSYS 302`.
-> - EEE students will also continue to use GitHub in `ELECTENG 311`, and possibly in the industry even as a hardware design engineer.
+## Hardware
+- ATmega328PB microcontroller
+- LM324 op-amps for signal conditioning
+- 74HC595 shift register for display driving
+- Custom SMT PCB (Smart Energy Challenge entry)
 
-## Usage
-
-Refer to [`CONTRIBUTING.md`](./.github/CONTRIBUTING.md) for a suggested possible workflow using this structure.
+## Notes
+The firmware assumes a 2MHz system clock. The physical prototype experienced 
+issues due to the MCU running at its default clock speed instead, which 
+affected ADC sampling timing.
