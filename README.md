@@ -9,9 +9,9 @@ by an inductive AC load. Results are shown sequentially on a 4-digit
 7-segment display.
 
 ## Repository contents
-- `firmware/` — ATmega328PB C code written in Atmel/Microchip Studio
-- `ltspice/` — Simulation files for the analogue signal conditioning circuitry
-- `schematic/` — Circuit schematic for the analogue front end
+- `firmware/` - ATmega328PB C code written in Atmel/Microchip Studio
+- `ltspice/` - Simulation files for the analogue signal conditioning circuitry
+- `schematic/` - Circuit schematic for the analogue front end
 
 ## Hardware
 - ATmega328PB microcontroller
